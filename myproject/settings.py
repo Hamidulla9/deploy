@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'accounts',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -40,6 +41,7 @@ ROOT_URLCONF = 'myproject.urls'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.renderers.JSONRenderer',
     ),
 }
 
